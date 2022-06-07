@@ -1,0 +1,48 @@
+/* Doy estilo a mi anuncio de la pagina de inicio y uso gradiente*/
+.anuncio {
+    color: black;
+    font-size: 500%;
+    font-style: italic;
+    border: solid 5px greenyellow;
+    font-family: Arial;
+    background-image: linear-gradient(to right, rgb(170, 100, 100), white);
+    margin-top: 100px;
+
+    @media only screen and (max-width:768px) {
+        width: 100%;
+        font-size: 2.5rem;
+    }
+}
+
+/*agrego mixing sin parametro a mi enunciado de lista de productos*/
+
+@mixin style-announcement {
+    text-align: center;
+    line-height: 5.5;
+}
+
+.Pipp {
+    @include style-announcement()
+}
+
+/*aplico Maps*/
+
+$fuentes:(light:40px,
+    medium:600%,
+    big:200px,
+);
+
+/*encabezado contacto*/
+.cont {
+    color: brown;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: map-get($fuentes, medium);
+}
+
+.distintaspizas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
