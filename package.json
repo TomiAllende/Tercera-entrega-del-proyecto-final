@@ -296,5 +296,13 @@
     "yargs": "^17.5.1",
     "yargs-parser": "^20.2.9"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TomiAllende/Tercera-entrega-del-proyecto-final.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TomiAllende/Tercera-entrega-del-proyecto-final/issues"
+  },
+  "homepage": "https://github.com/TomiAllende/Tercera-entrega-del-proyecto-final#readme",
   "description": ""
 }

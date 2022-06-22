@@ -9,7 +9,7 @@
   font-size: 2rem;
   color: red; }
   @media only screen and (max-width: 768px) {
-    .anuncio {
+    .anuncio .anuncio {
       grid-area: anuncio;
       display: flex;
       font-size: 10%;
@@ -112,7 +112,7 @@
     display: none; } }
 
 /*Realizo vista mobile*/
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
   .logodebm {
     height: 150px;
     width: 150px;
@@ -128,8 +128,8 @@
 /*acomodo imagenes para carrousel*/
 .carousel {
   width: 70%; }
-  @media only screen and (max-width: 768px) {
-    .carousel {
+  @media only screen and (min-width: 768px) {
+    .carousel .carousel {
       grid-area: carousel; } }
 
 .carousel-container {
@@ -140,13 +140,6 @@
 #Video {
   color: darkblue;
   text-align: center; }
-
-/*Aca hago el footer con animacion hover*/
-.footer:hover {
-  color: red;
-  grid-area: footer;
-  transform: translate(500px, 0px);
-  transition: all 3s; }
 
 /* Pongo fondos */
 body {
@@ -188,21 +181,17 @@ body {
   .Products:hover {
     transform: scale(1.1); }
   @media only screen and (min-width: 768px) and (max-width: 1239px) {
-    .Products {
+    .Products .Products {
       display: flex;
       align-content: flex-start;
       margin-left: 40%;
-      color: brown; }
-      .Products:hover {
-        display: none; } }
-  @media only screen and (max-width: 768px) {
-    .Products {
+      color: brown; } }
+  @media only screen and (min-width: 768px) {
+    .Products .Products {
       display: flex;
       align-content: flex-start;
       margin-left: 40%;
-      color: brown; }
-      .Products:hover {
-        display: none; } }
+      color: brown; } }
 
 /* Armo lista de lo que pedi en una caja, siguiente paso es relizar que se envie*/
 #ordenes {
@@ -212,8 +201,8 @@ body {
   color: black;
   font-weight: bolder;
   font-family: Arial, Helvetica, sans-serif; }
-  @media only screen and (max-width: 768px) {
-    #ordenes {
+  @media only screen and (min-width: 768px) {
+    #ordenes #ordenes {
       border: solid 2px black;
       height: 500px;
       width: 100%;
@@ -259,8 +248,8 @@ body {
 /*background al index*/
 .Main {
   background-color: rgba(128, 128, 128, 0.781); }
-  @media only screen and (max-width: 768px) {
-    .Main {
+  @media only screen and (min-width: 768px) {
+    .Main .Main {
       display: grid;
       grid-template-columns: auto;
       grid-template-rows: auto;
@@ -284,8 +273,8 @@ body {
   animation-duration: 3s;
   animation-delay: 0;
   animation-fill-mode: forwards; }
-  @media only screen and (max-width: 768px) {
-    .muevecarro:hover {
+  @media only screen and (min-width: 768px) {
+    .muevecarro:hover .muevecarro:hover {
       height: 100px;
       width: 100px; } }
 
@@ -350,12 +339,9 @@ body {
   display: flex;
   align-items: right;
   justify-content: space-around; }
-  @media only screen and (min-width: 768px) and (max-width: 1239px) {
-    #footer {
-      visibility: hidden; } }
-  @media only screen and (max-width: 768px) {
-    #footer {
-      visibility: hidden; } }
+  @media only screen and (min-width: 320px) {
+    #footer #footer {
+      visibility: visible; } }
 
 .footer_nav a {
   text-decoration: none;
@@ -364,9 +350,6 @@ body {
   padding: 10px;
   margin: 100px;
   margin-left: 50px; }
-  @media only screen and (max-width: 768px) {
-    .footer_nav a {
-      display: none; } }
 
 .footer_nav a:hover {
   color: white;
@@ -379,8 +362,8 @@ body {
   flex-direction: row;
   justify-content: center;
   width: 100%; }
-  @media only screen and (max-width: 768px) {
-    .padreflex {
+  @media only screen and (min-width: 768px) {
+    .padreflex .padreflex {
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -395,10 +378,6 @@ body {
   font-family: Arial;
   background-image: linear-gradient(to right, #aa6464, white);
   margin-top: 100px; }
-  @media only screen and (max-width: 768px) {
-    .anuncio {
-      width: 100%;
-      font-size: 2.5rem; } }
 
 /*agrego mixing sin parametro a mi enunciado de lista de productos*/
 .Pipp {

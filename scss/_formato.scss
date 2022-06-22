@@ -1,19 +1,9 @@
-
-
 #Video {
     color: darkblue;
     text-align: center;
 }
 
 
-/*Aca hago el footer con animacion hover*/
-
-.footer:hover {
-    color: red;
-    grid-area: footer;
-    transform: translate(500px, 0px);
-    transition: all 3s;
-}
 
 
 /* Pongo fondos */
@@ -74,277 +64,306 @@ body {
     &:hover {
         transform: scale(1.1);
     }
-    @media only screen and (min-width:768px) and (max-width:1239px){
+
+    @media only screen and (min-width:768px) and (max-width:1239px) {
+        .Products {
+            display: flex;
+            align-content: flex-start;
+            margin-left: 40%;
+            color: brown;
+        }
+    }
+
+    @media only screen and (min-width:768px) {
+        .Products{
         display: flex;
         align-content: flex-start;
         margin-left: 40%;
         color: brown;
-        &:hover{
-            display: none;
-        }
     }
-    @media only screen and (max-width:768px){
-        display: flex;
-        align-content: flex-start;
-        margin-left: 40%;
-        color: brown;
-        &:hover{
-            display: none;
-        }
     }
+
+    @media only screen and (min-width:320px) {}
+
+    @media only screen and (min-width:1024px) {}
 }
 
 
 
 
-    /* Armo lista de lo que pedi en una caja, siguiente paso es relizar que se envie*/
+/* Armo lista de lo que pedi en una caja, siguiente paso es relizar que se envie*/
 
-    #ordenes {
+#ordenes {
+    border: solid 2px black;
+    height: 500px;
+    background-color: beige;
+    color: black;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+
+    @media only screen and (min-width:768px) {
+        #ordenes{
         border: solid 2px black;
         height: 500px;
+        width: 100%;
         background-color: beige;
         color: black;
         font-weight: bolder;
         font-family: Arial, Helvetica, sans-serif;
-
-        @media only screen and (max-width:768px) {
-            border: solid 2px black;
-            height: 500px;
-            width: 100%;
-            background-color: beige;
-            color: black;
-            font-weight: bolder;
-            font-family: Arial, Helvetica, sans-serif;
         }
     }
 
+    @media only screen and (min-width:320px) {}
 
-    /*armo transicion*/
+    @media only screen and (min-width:1024px) {}
+}
 
-    .transition {
-        border: solid 2px black;
-        background-color: rgba(255, 255, 255, 0.83);
-        margin-right: 200px;
-        margin-left: 60px;
-        margin-bottom: 60px;
-        width: 600px;
-        text-align: center;
+
+/*armo transicion*/
+
+.transition {
+    border: solid 2px black;
+    background-color: rgba(255, 255, 255, 0.83);
+    margin-right: 200px;
+    margin-left: 60px;
+    margin-bottom: 60px;
+    width: 600px;
+    text-align: center;
+}
+
+
+
+/*alineo titulo y fotos de empanadas*/
+
+
+
+.tipos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+}
+
+
+#lasempa {
+    text-align: center;
+}
+
+
+/* aplico fondo al sector de galeria*/
+
+.fondogalery {
+    background-color: lightsalmon;
+}
+
+
+/*pongo whatsapp para que me contacten*/
+
+.wapp {
+    float: right;
+    padding-top: 50px;
+}
+
+
+/*agrando imagen*/
+
+.pizzamedia {
+    width: 2000px;
+    height: 700px;
+}
+
+
+/*background al index*/
+
+
+.Main {
+    background-color: rgba(128, 128, 128, 0.781);
+
+    @media only screen and (min-width:768px) {
+        .Main{ 
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+            ".anuncio."
+            ".carousel."
+        ;
+        align-items: center;
+    }
     }
 
+    @media only screen and (min-width:320px) {}
+
+    @media only screen and (min-width:1024px) {}
+}
 
 
-    /*alineo titulo y fotos de empanadas*/
+/*meter traslado de imagen del carro y la animacion*/
 
+.muevecarro:hover {
+    transform: rotateX(310deg);
+}
 
-
-    .tipos {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-content: center;
+@keyframes zoom {
+    0% {
+        transform: scale(0.9);
     }
 
-
-    #lasempa {
-        text-align: center;
+    100% {
+        transform: scale(1.2);
     }
+}
 
+.muevecarro:hover {
+    width: 40%;
+    animation-name: zoom;
+    animation-timing-function: linear;
+    animation-duration: 3s;
+    animation-delay: 0;
+    animation-fill-mode: forwards;
 
-    /* aplico fondo al sector de galeria*/
-
-    .fondogalery {
-        background-color: lightsalmon;
-    }
-
-
-    /*pongo whatsapp para que me contacten*/
-
-    .wapp {
-        float: right;
-        padding-top: 50px;
-    }
-
-
-    /*agrando imagen*/
-
-    .pizzamedia {
-        width: 2000px;
-        height: 700px;
-    }
-
-
-    /*background al index*/
-
-
-    .Main {
-        background-color: rgba(128, 128, 128, 0.781);
-
-        @media only screen and (max-width:768px) {
-            display: grid;
-            grid-template-columns: auto;
-            grid-template-rows: auto;
-            grid-template-areas:
-                ".anuncio."
-                ".carousel."
-            ;
-            align-items: center;
-        }
-    }
-
-
-    /*meter traslado de imagen del carro y la animacion*/
-
-    .muevecarro:hover {
-        transform: rotateX(310deg);
-    }
-
-    @keyframes zoom {
-        0% {
-            transform: scale(0.9);
-        }
-
-        100% {
-            transform: scale(1.2);
-        }
-    }
-
-    .muevecarro:hover {
-        width: 40%;
-        animation-name: zoom;
-        animation-timing-function: linear;
-        animation-duration: 3s;
-        animation-delay: 0;
-        animation-fill-mode: forwards;
-
-        @media only screen and (max-width:768px) {
+    @media only screen and (min-width:768px) {
+        .muevecarro:hover {
 
             height: 100px;
             width: 100px;
         }
     }
 
+    @media only screen and (min-width:320px) {}
+
+    @media only screen and (min-width:1024px) {}
+}
 
 
-    /*voy agregar clases para utilizar el hover en el area de servicios*/
+
+/*voy agregar clases para utilizar el hover en el area de servicios*/
 
 
-    .jamon:hover {
-        height: 350px;
-        width: 350px;
+.jamon:hover {
+    height: 350px;
+    width: 350px;
+}
+
+.cebolla:hover {
+    height: 300px;
+    width: 400px;
+}
+
+.carne:hover {
+    height: 300px;
+    width: 300px;
+}
+
+
+/*hago lo mismo con las pizzas en servicios*/
+
+.decebo:hover {
+    height: 300px;
+    width: 300px;
+}
+
+.demuzza:hover {
+    height: 300px;
+    width: 300px;
+}
+
+.dejamon:hover {
+    height: 300px;
+    width: 300px;
+}
+
+
+/*aplico hover a mi cervezas*/
+
+.impe:hover {
+    height: 300px;
+    width: 300px;
+}
+
+.stelita:hover {
+    height: 300px;
+    width: 300px;
+}
+
+.andona:hover {
+    height: 300px;
+    width: 300px;
+}
+
+.heini:hover {
+    height: 300px;
+    width: 300px;
+}
+
+.scheinde:hover {
+    height: 300px;
+    width: 300px;
+}
+
+.cori:hover {
+    height: 300px;
+    width: 300px;
+}
+
+
+/*hago footer*/
+#footer {
+    grid-area: footer;
+    background-color: rgba(255, 179, 0, 0.574);
+    background-size: cover;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: right;
+    justify-content: space-around;
+
+    @media only screen and (min-width:320px) {
+        #footer{
+        visibility: visible;
     }
-
-    .cebolla:hover {
-        height: 300px;
-        width: 400px;
     }
+}
 
-    .carne:hover {
-        height: 300px;
-        width: 300px;
-    }
+.footer_nav a {
+    text-decoration: none;
+    color: black;
+    border: inset 2px #DFDFDF;
+    padding: 10px;
+    margin: 100px;
+    margin-left: 50px;
 
+    @media only screen and (min-width:768px) {}
 
-    /*hago lo mismo con las pizzas en servicios*/
+    @media only screen and (min-width:320px) {}
 
-    .decebo:hover {
-        height: 300px;
-        width: 300px;
-    }
+    @media only screen and (min-width:1024px) {}
+}
 
-    .demuzza:hover {
-        height: 300px;
-        width: 300px;
-    }
-
-    .dejamon:hover {
-        height: 300px;
-        width: 300px;
-    }
-
-
-    /*aplico hover a mi cervezas*/
-
-    .impe:hover {
-        height: 300px;
-        width: 300px;
-    }
-
-    .stelita:hover {
-        height: 300px;
-        width: 300px;
-    }
-
-    .andona:hover {
-        height: 300px;
-        width: 300px;
-    }
-
-    .heini:hover {
-        height: 300px;
-        width: 300px;
-    }
-
-    .scheinde:hover {
-        height: 300px;
-        width: 300px;
-    }
-
-    .cori:hover {
-        height: 300px;
-        width: 300px;
-    }
+.footer_nav a:hover {
+    color: white;
+    font-weight: bold;
+    transform: translate(2px, 5px);
+    transition: all 0.5s;
+}
 
 
-    /*hago footer*/
-    #footer {
-        grid-area: footer;
-        background-color: rgba(255, 179, 0, 0.574);
-        background-size: cover;
-        height: 70px;
-        width: 100%;
-        display: flex;
-        align-items: right;
-        justify-content: space-around;
+.padreflex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
 
-        @media only screen and (min-width:768px) and (max-width:1239px){
-            visibility: hidden;
-        }
-
-        @media only screen and (max-width:768px) {
-            visibility: hidden;
-        }
-    }
-
-    .footer_nav a {
-        text-decoration: none;
-        color: black;
-        border: inset 2px #DFDFDF;
-        padding: 10px;
-        margin: 100px;
-        margin-left: 50px;
-
-        @media only screen and (max-width:768px) {
-            display: none;
-        }
-    }
-
-    .footer_nav a:hover {
-        color: white;
-        font-weight: bold;
-        transform: translate(2px, 5px);
-        transition: all 0.5s;
-    }
-
-
-    .padreflex {
+    @media only screen and (min-width:768px) {
+        .padreflex{
         display: flex;
         flex-direction: row;
         justify-content: center;
-        width: 100%;
-        @media only screen and (max-width:768px){
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            width: 160%;
+        width: 160%;
         }
     }
+
+    @media only screen and (min-width:320px) {}
+
+    @media only screen and (min-width:1024px) {}
+}
